@@ -1,0 +1,12 @@
+<div class="carousel" :style="style" @touchstart="onTouchstart" @touchmove="onTouchmove" @touchend="onTouchend" @touchcancel="onTouchcancel">
+    <div class="carousel-track" :style="trackStyle">
+        <div class="carousel-item" :style="{width:width + 'px'}" >
+            {{addonBefore}}
+        </div>
+        <slot></slot>
+        <div class="carousel-item" :style="{width:width + 'px'}" >
+            {{addonAfter}}
+        </div>
+    </div>
+
+</div>

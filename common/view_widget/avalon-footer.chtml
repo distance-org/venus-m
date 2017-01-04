@@ -1,0 +1,36 @@
+<script type="text/javascript" src="/common/js_lib/jquery.js"></script>
+<script type="text/javascript" src="/common/js_lib/avalon.modern.js"></script>
+<% if (!isPub) {%>
+<script type="text/javascript" src="/common/js_lib/sea.js" ></script>
+<% } %>
+
+<script>
+    window.dm = {
+                beApiRootPath : "<%=beApiRootPath%>",
+                debug : true
+            }
+    <% if (isPub) {%>
+        avalon.config({
+            debug: false
+        });
+    <% } %>
+</script>
+
+<%-getThirdpartyJs()%>
+<%-getJs()%>
+
+
+<% if (!isPub) {%>
+<script>
+    seajs.config({
+        base: "<%=jsRootPath%>"
+    });
+    seajs.use("<%=entryJsFile%>", function() {
+        avalon.scan(document.body);
+    });
+</script>
+<% } %>
+
+
+</body>
+</html>

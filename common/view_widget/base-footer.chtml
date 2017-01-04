@@ -1,0 +1,42 @@
+<script type="text/javascript" src="/common/js_lib/fastclick.js"></script>
+<script type="text/javascript" src="/common/js_lib/zepto.js"></script>
+<script type="text/javascript" src="/common/js_lib/vue.js"></script>
+<% if (!isPub) {%>
+<script type="text/javascript" src="/common/js_lib/sea.js" ></script>
+<% } %>
+
+<script>
+    var neg=/DouMi\/([\d.]+)/;
+    var arr=window.navigator.userAgent.match(neg);
+    if(!!arr && !!arr[0]){
+        $("header.mod-header").hide();
+        $("div.mod-header-show").css("padding-top",0);
+    }
+    <% if (isPub) {%>
+        Vue.config.devtools = false;
+    <% } %>
+    FastClick.attach(document.body);
+    window.dm = {
+        beApiRootPath : "<%=beApiRootPath%>",
+        debug : true
+    }
+
+</script>
+
+<%-getThirdpartyJs()%>
+<%-getJs()%>
+
+
+<% if (!isPub) {%>
+<script>
+    seajs.config({
+        base: "<%=jsRootPath%>"
+    });
+    seajs.use("<%=entryJsFile%>", function() {
+    });
+</script>
+<% } %>
+
+
+</body>
+</html>

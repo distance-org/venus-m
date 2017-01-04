@@ -1,0 +1,9 @@
+
+<script>
+    //隐藏loading
+    window.pageDone = function() {
+
+    }
+</script>
+
+<div id="_page-loading" style="position: fixed; top: 0; bottom: 0; width: 100%"></div>

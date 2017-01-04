@@ -1,0 +1,143 @@
+<%setJs('/static/js/index.js')%>
+<%setCss('/static/less/index.less')%>
+<%include /common/view_widget/base-header.chtml%>
+</head>
+<body>
+
+<div class="container" id="Page_Root">
+    <div class="weui-tab">
+        <div class="status-bar">
+            title
+        </div>
+        <div class="weui-tab__panel">
+            <div class="content">
+                <!--种类-->
+                <div class="weui-grids">
+                    <a href="javascript:;" class="weui-grid">
+                        <div class="weui-grid__icon">
+                            <img src="./images/icon_nav_button.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            Button
+                        </p>
+                    </a>
+                    <a href="javascript:;" class="weui-grid">
+                        <div class="weui-grid__icon">
+                            <img src="./images/icon_nav_cell.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            Cell
+                        </p>
+                    </a>
+                    <a href="javascript:;" class="weui-grid">
+                        <div class="weui-grid__icon">
+                            <img src="./images/icon_nav_cell.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            Cell
+                        </p>
+                    </a>
+                    <a href="javascript:;" class="weui-grid">
+                        <div class="weui-grid__icon">
+                            <img src="./images/icon_nav_cell.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            Cell
+                        </p>
+                    </a>
+                    <a href="javascript:;" class="weui-grid">
+                        <div class="weui-grid__icon">
+                            <img src="./images/icon_nav_cell.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            Cell
+                        </p>
+                    </a>
+                    <a href="javascript:;" class="weui-grid">
+                        <div class="weui-grid__icon">
+                            <img src="./images/icon_nav_cell.png" alt="">
+                        </div>
+                        <p class="weui-grid__label">
+                            Cell
+                        </p>
+                    </a>
+                </div>
+                <!--轮播图-->
+                <div class="scroll-banner">
+                    <carousel :indicators="true">
+                        <carousel-item  @click="log(0)">carousel-item-0</carousel-item>
+                        <carousel-item  @click="log(1)">carousel-item-1</carousel-item>
+                        <carousel-item  @click="log(2)">carousel-item-2</carousel-item>
+                    </carousel>
+                </div>
+                <!--帖子列表-->
+                <div class="weui-cells post-list-wrap">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <div class="cell-headnote">
+                                <div class="cell-category">促销</div>
+                                <div class="cell-mark">
+                                    认证用户 置顶消息
+                                </div>
+                            </div>
+                            <div class="cell-core-content">
+                                大望路招聘咖啡促销
+                            </div>
+                            <div class="cell-imgs">
+                                <img src="abc.png" alt="">
+                                <img src="aaa.png" alt="">
+                            </div>
+
+                            <div class="cell-footnote">
+                                <span>会说话的猫</span>
+                                <span>一天前发布</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <div class="cell-headnote">
+                                <div class="cell-category">促销</div>
+                                <div class="cell-mark">
+                                    认证用户 置顶消息
+                                </div>
+                            </div>
+                            <div class="cell-core-content">
+                                大望路招聘咖啡促销
+                            </div>
+                            <div class="cell-footnote">
+                                <span>会说话的猫</span>
+                                <span>一天前发布</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weui-tabbar">
+            <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+                <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                <p class="weui-tabbar__label">最新</p>
+            </a>
+            <!--<a href="javascript:;" class="weui-tabbar__item">
+                <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                <p class="weui-tabbar__label">分类</p>
+            </a>-->
+            <a href="javascript:;" class="weui-tabbar__item">
+                <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                <p class="weui-tabbar__label">发布</p>
+            </a>
+            <!--<a href="javascript:;" class="weui-tabbar__item">
+                <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                <p class="weui-tabbar__label">消息</p>
+            </a>-->
+            <a href="javascript:;" class="weui-tabbar__item">
+                <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                <p class="weui-tabbar__label">我</p>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<%include /common/view_widget/base-footer.chtml%>

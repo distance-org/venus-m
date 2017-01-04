@@ -1,0 +1,45 @@
+@import "/common/less_widget/atom.less";
+.widget-toast.mask{
+  .pf;
+  .none;
+  .bgc(rgba(0,0,0,0));
+  width:100%;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom:0;
+  .form-warning {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    text-align: center;
+    .bgc(rgba(0,0,0,0.3));
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 3px;
+    -webkit-transform: translate3d(0, -50%, 0);
+    -ms-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-enter-active{
+  opacity: 1;
+}
+
+.modal-leave {
+  opacity: 1;
+}
+.modal-leave-active{
+  opacity: 0;
+}
+.modal-enter,.modal-leave {
+  transition: all .3s ease;
+}
