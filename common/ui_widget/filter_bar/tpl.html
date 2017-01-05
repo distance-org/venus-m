@@ -1,0 +1,34 @@
+<div class="widget-filter-wrap">
+    <div class="filter-nav-wrap-ph">
+        <div class="filter-type-ph">
+            placeholder
+        </div>
+    </div>
+    <div class="filter">
+        <div class="weui-flex filter-nav-wrap">
+            <div class="weui-flex__item filter-type" :class="{active: 0 == activeIndex}" @click="showFilterMenu(0)">
+                <div class="content">
+                    全部
+                </div>
+            </div>
+            <div class="weui-flex__item filter-type" :class="{active: 1 == activeIndex}" @click="showFilterMenu(1)">
+                <div class="content">
+                    默认排序
+                </div>
+            </div>
+        </div>
+        <ul class="filter-menu-wrap">
+            <li :class="{active: 0 == activeIndex}">
+                <div href="">item1</div>
+                <div href="">item2</div>
+            </li>
+            <li :class="{active : 1 == activeIndex}">
+                <div href="">item3</div>
+                <div href="">item4</div>
+                <div href="">item3</div>
+                <div href="">item4</div>
+            </li>
+        </ul>
+        <div class="mask" :class="{active : null != activeIndex}" @click="showFilterMenu()"></div>
+    </div>
+</div>

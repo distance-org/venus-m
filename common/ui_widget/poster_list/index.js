@@ -1,5 +1,5 @@
 export default {
-    template : require('/common/ui_widget/filter/tpl.html'),
+    template : require('/common/ui_widget/poster_list/tpl.html'),
     data() {
         return {
 
@@ -8,5 +8,4 @@ export default {
     methods : {
 
     }
-
 }
