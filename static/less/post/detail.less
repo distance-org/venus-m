@@ -1,0 +1,36 @@
+@import "/common/less_widget/atom.less";
+@import "/common/ui_widget/status_bar_b/style.less";
+@import "/common/ui_widget/send_comment/style.less";
+.post-detail {
+  .mb(0);
+  .pb(0);
+  section {
+    margin-bottom: 0;
+  }
+}
+/*底部工具栏*/
+.detail-page-tool-bar-wrap .ph {
+  border-top: 3px solid #C0BFC4; /*外边框+子边框*/
+  padding: 8px 15px;
+  visibility: hidden;
+}
+.detail-page-tool-bar-wrap .detail-page-tool-bar {
+  .w(100%);
+  .pf;
+  bottom:0;
+  text-align: right;
+  border-top: 1px solid #C0BFC4;
+  background: #F7F7FA;
+  color: #999999;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  .comment {
+    flex-grow:4;
+    div {
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+      text-indent: 10px;
+    }
+  }
+}

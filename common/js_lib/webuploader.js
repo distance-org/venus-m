@@ -953,7 +953,7 @@
                     left: '0',
                     right: '0',
                     overflow: 'hidden',
-                    opacity : 0
+                    opacity : 1
                 });
                 parent.append( container );
                 parent.addClass('webuploader-container');
@@ -5857,8 +5857,8 @@
                 if ( opts.sendAsBinary ) {
                     server += (/\?/.test( server ) ? '&' : '?') +
                             $.param( owner._formData );
-    
                     binary = blob.getSource();
+                    console.log(666, blob instanceof File);
                 } else {
                     formData = new FormData();
                     $.each( owner._formData, function( k, v ) {
@@ -5882,7 +5882,7 @@
                     // 强制设置成 content-type 为文件流。
                     xhr.overrideMimeType &&
                             xhr.overrideMimeType('application/octet-stream');
-    
+                    xhr.setRequestHeader("Content-Type", 'application/octet-stream');
                     // android直接发送blob会导致服务端接收到的是空文件。
                     // bug详情。
                     // https://code.google.com/p/android/issues/detail?id=39882

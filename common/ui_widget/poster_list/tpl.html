@@ -1,41 +1,26 @@
 <div class="weui-cells widget-post-list-wrap">
-    <div class="weui-cell">
+    <div class="weui-cell" v-for="item in list">
         <div class="weui-cell__bd">
             <div class="cell-headnote">
-                <div class="cell-category">促销</div>
+                <div class="cell-category">{{item.category}}</div>
                 <div class="cell-mark">
-                    认证用户 置顶消息
+                    <template v-for="mark in item.marks">
+                        {{mark}}
+                    </template>
                 </div>
             </div>
             <div class="cell-core-content">
-                大望路招聘咖啡促销
+                {{item.content}}
             </div>
-            <div class="cell-imgs">
-                <img src="abc.png" alt="">
-                <img src="aaa.png" alt="">
+            <div class="cell-imgs" v-if="item.images && item.images.length" >
+                <img :src="img" alt="" v-for="img in item.images">
             </div>
 
             <div class="cell-footnote">
-                <span>会说话的猫</span>
-                <span>一天前发布</span>
+                <span>{{item.author}}</span>
+                <span>{{item.createTime}}</span>
             </div>
         </div>
     </div>
-    <div class="weui-cell">
-        <div class="weui-cell__bd">
-            <div class="cell-headnote">
-                <div class="cell-category">促销</div>
-                <div class="cell-mark">
-                    认证用户 置顶消息
-                </div>
-            </div>
-            <div class="cell-core-content">
-                大望路招聘咖啡促销
-            </div>
-            <div class="cell-footnote">
-                <span>会说话的猫</span>
-                <span>一天前发布</span>
-            </div>
-        </div>
-    </div>
+
 </div>

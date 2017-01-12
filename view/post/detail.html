@@ -1,1 +1,52 @@
-index.html
+<%setTitle('信息详情')%>
+<%setJs('/static/js/post/detail.js')%>
+<%setCss('/static/less/post/detail.less')%>
+<%include /common/view_widget/base-header.chtml%>
+</head>
+<body >
+<div id="container">
+    <status-bar-b title="信息详情"></status-bar-b>
+    <!--post详情-->
+    <article class="weui-article post-detail">
+        <h1>大标题</h1>
+        <section>
+            <p>工作内容：超市促销，销售活动产品，我司与各大厂家有长期合作关系，所有项目均为厂家直招，我司非中介 </p>
+            <p>职位要求：女孩，165cm以上，口齿伶俐，样貌端正，认真负责，不要健康证，态度积极，服从管理，普通话熟练,沟通能力强 </p>
+            <p><img src="http://pic8.58cdn.com.cn/anjuke_58/a3f11ca5903c725d6223994c36cad8c9?w=640&h=480&crop=1" alt=""></p>
+            <p>工作时间：上六休一 </p>
+            <p><img src="http://sta.doumistatic.com/src/image/jianzhi/mobile/c/wap/v2/logo_doumi.png" alt=""></p>
+            <p>工作地点：北京各大超市就近分配 </p>
+            <p>特殊要求: 普通话熟练,沟通能力强,身份不限,165cm以上,16-25岁,吃苦耐劳,活泼开朗,认真负责,积极主动,服从安排,形象好 </p>
+            <p>
+                <img src="http://sta.doumistatic.com/src/image/jianzhi/mobile/c/wap/v2/logo_doumi.png" alt="">
+            </p>
+            <p>
+                <img src="http://sta.doumistatic.com/src/image/jianzhi/mobile/c/wap/v2/logo_doumi.png" alt="">
+            </p>
+            <p>
+                <img src="http://sta.doumistatic.com/src/image/jianzhi/mobile/c/wap/v2/logo_doumi.png" alt="">
+            </p>
+            <p>
+                234sdfsdfsdfsdfsdf
+            </p>
+        </section>
+    </article>
+    <!--详情页底部工具栏-->
+    <div class="detail-page-tool-bar-wrap">
+        <div class="ph">
+            ph
+        </div>
+        <div class="weui-flex detail-page-tool-bar">
+            <div class="weui-flex__item comment">
+                <div class="placeholder" @click="sendComment">写评论...</div>
+            </div>
+            <div class="weui-flex__item"><div class="placeholder">关注</div></div>
+            <div class="weui-flex__item"><div class="placeholder">联系</div></div>
+            <!--
+                    <div class="weui-flex__item"><div class="placeholder">分享</div></div>
+            -->
+        </div>
+    </div>
+</div>
+
+<%include /common/view_widget/base-footer.chtml%>
