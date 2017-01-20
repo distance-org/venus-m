@@ -1,0 +1,35 @@
+@import "/common/less_widget/atom.less";
+@import "/common/ui_widget/status_bar_b/style.less";
+
+
+.main-wrap {
+  .w(100%);
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+.post-title {
+  .w(100%);
+  .h(40px);
+  .f(18px);
+  margin: 20px 0;
+  border: 0px;
+  border-bottom: 2px solid #6233b5;
+}
+
+.post-content {
+  .w(100%);
+  min-height: 200px;
+  max-height: 300px;
+  overflow: auto;
+}
+.post-content:empty:before {
+    content: attr(placeholder);
+    color: darkgrey;
+    display: block; /* For Firefox */
+}
+
+.add-img {
+  .pf;
+  bottom: 30px;
+  right:15px;
+}
